@@ -1,0 +1,10 @@
+{
+  "Document Title": "CWC Application Configuration Document",
+  "Architecture": {
+    "UI": {
+      "id": 2,
+      "company": "ACME"
+    }
+  }
+}
+//http://jsonviewer.stack.hu/

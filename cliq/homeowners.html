@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>ConnectWithContractors 2.0</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!-- Le styles -->
+		<link href="css/bootstrap10.min.css" rel="stylesheet" id="bootmin">
+		<style type="text/css">
+			body {
+				padding-top: 0px;
+				padding-bottom: 0px;
+			}
+		</style>
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!-- Le fav and touch icons -->
+		<link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Project -->
+		<link href="css/application.css" rel="stylesheet">
+		<link rel="stylesheet/less" href="/path/to/bootstrap.less">
+		<script src="js/less-1.3.0.min.js"></script>
+	</head>
+
+	<body>
+
+
+
+		<div class="sidebar-nav">
+	<div class="well" style="width:200px; padding: 8px 0;">
+		<ul class="nav nav-list">       
+		  <li><a href="index"><i class="icon-signal"></i>Dashboard</a></li>
+          <li class="active"><a href="javascript:show('messages')"><i class="icon-envelope"></i> Messages <span class="badge badge-info">4</span></a></li>
+          <li><a href="#"><i class="icon-comment"></i> Comments <span class="badge badge-info">10</span></a></li>
+          <li><a href="#"><i class="icon-folder-open"></i> My Projects <span class="badge badge-info">10</span></a></li>
+          <li><a href="#"><i class="icon-pencil"></i> Bids Received <span class="badge badge-info">10</span></a></li>
+		  <li><a href="#"><i class="icon-heart"></i> Favorites</a></li>
+          <li class="divider"></li>
+          
+		  <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+		  <li><a href="#"><i class="icon-wrench"></i> Edit Profile</a></li>
+		  <li><a href="#"><i class="icon-th-list"></i> Settings</a></li>
+		  <li><a href="#"><i class="icon-share"></i> Logout</a></li>
+		</ul>
+	</div>
+	
+</div>
+
+
+			
+			<hr>
+
+
+
+		
+		<!-- /container -->
+
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="js/jquery.js"></script>
+		<script src="../assets/js/bootstrap-transition.js"></script>
+		<script src="../assets/js/bootstrap-alert.js"></script>
+		<script src="../assets/js/bootstrap-modal.js"></script>
+		<script src="../assets/js/bootstrap-dropdown.js"></script>
+		<script src="../assets/js/bootstrap-scrollspy.js"></script>
+		<script src="../assets/js/bootstrap-tab.js"></script>
+		<script src="../assets/js/bootstrap-tooltip.js"></script>
+		<script src="../assets/js/bootstrap-popover.js"></script>
+		<script src="../assets/js/bootstrap-button.js"></script>
+		<script src="../assets/js/bootstrap-collapse.js"></script>
+		<script src="../assets/js/bootstrap-carousel.js"></script>
+		<script src="../assets/js/bootstrap-typeahead.js"></script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<!--<script src="js/agility.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<h1>Hello, world!</h1>-->
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Project -->
+		<script src="js/application.js"></script>
+		<script src="js/nuuton.js"></script>
+		<script>
+		show(tableName){
+		$.get("wayne.json",
+		function(data){
+			tabulaLinda(data,'messages');
+			}, "json");
+		}
+		/*
+		<div class="pull-right" style="width:1080px; padding: 8px 0;">
+		<ul class="nav nav-list"> 
+		  <li class="nav-header" id>Messages</li>        
+		  <div id="messages"></div>
+		</ul>
+	</div>
+			*/
+		function tabulaLinda(json,tableName){
+			    var well = $("<div>").addClass("well");
+				var table = $("<div>");
+				for(i=0; i<json.messages.length; i++){
+					var row = $("<div>").addClass('row').text(json.messages[i].type).css({marginLeft: '1px'});//(json.messages.type(unread)[i].from);
+					table.append(row);
+					for(j=0;j<json.messages[i].list.length;j++){
+						var row = $("<div>").addClass('row').text(json.messages[i].list[j].from +' | '+json.messages[i].list[j].subject+' | '+json.messages[i].list[j].body).css({marginLeft: '2px'});//(json.messages.type(unread)[i].from);
+						table.append(row);
+					}
+				}
+				well.append(table);
+		var tableQuery ="'#"+tableName+"'"
+        $(tableQuery).append(well);
+		}
+/* {
+	"firstName": "Wayne",
+	"lastName": "Matthews",
+	"email":"wayne@tpbhomes.com",
+	"messages":
+	[
+		{"type": "unread","list":[
+			{
+				"from":"allison.eponine.mobley@gmail.com",
+				"subject":"test subject",
+				"body":"hello wayne"
+			},
+			{
+				"from":"connectwithcontractors@gmail.com",
+				"subject":"2nd test subject",
+				"body":"Awesome"
+			}
+		]},
+		{"type": "read","list":[{},{}]},
+		{"type": "sent","list":[{},{}]}
+	],
+ */
+		</script>
+	</body>
+</html>

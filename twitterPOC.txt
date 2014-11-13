@@ -1,0 +1,32 @@
+we can still use twitter, it just needs a minor backend to cache the requests between cliq and the user if we want the interface to be on the site instead of twitter
+[11/2/2014 12:50:46 PM] Blake Embrey: the closest thing we can do is poll the mentions api using our user and cache the requests they make into the system
+[11/2/2014 12:50:54 PM] Blake Embrey: it'd work easy enough that way
+[11/2/2014 12:50:54 PM] Blake Embrey: https://api-notebook.anypoint.mulesoft.com/notebooks#8cda64c888a9d7eaefbe
+[11/2/2014 12:51:19 PM] Blake Embrey: for the framework, i'm happy with whatever but i'm more a node guy
+[11/2/2014 12:51:40 PM] Blake Embrey: it'd be quickest just to build it using angular and node, for me at least
+[11/2/2014 12:57:14 PM] Allison Mobley: do that, build it in angular and node at a github profile you create and own called cliqapp.github.io
+[11/2/2014 12:57:50 PM] Allison Mobley: we'll keep my getcliq.github.io thing for what I have going on there
+[11/2/2014 12:58:19 PM] Allison Mobley: and then a/b test our versions
+[11/2/2014 12:58:40 PM] Allison Mobley: I'm mostly working on translating the design vision
+[11/2/2014 12:59:30 PM] Allison Mobley: so once you have the functionalities working, with angular, we'll go from there
+[11/2/2014 11:49:28 PM] Blake Embrey: hey
+[11/2/2014 11:49:42 PM] Allison Mobley: hi
+[11/2/2014 11:50:21 PM] Blake Embrey: i feel like a dick for doing this, but i'm not sure i'm going to be a good fit for working on cliq rn
+[11/2/2014 11:50:37 PM] Allison Mobley: let's get rid of the competing products thing, nothing can compete with us unless they made watson for free
+[11/2/2014 11:50:50 PM] Blake Embrey: i'm not sure i've got enough time for the next month to work on this, although i like the idea
+[11/2/2014 11:50:56 PM] Allison Mobley: we have the mother of general ai leadig dev =)
+[11/2/2014 11:51:08 PM] Allison Mobley: sorry meant that for luca
+[11/2/2014 11:51:15 PM] Allison Mobley: and no worries blake
+[11/2/2014 11:51:52 PM] Allison Mobley: but yea, touch base with me when you want to take an active role again.
+[11/2/2014 11:52:06 PM] Blake Embrey: awesome, thanks - i definitely will
+[11/2/2014 11:52:31 PM] Blake Embrey: i really hope you can still get an mvp out and i'm looking forward to seeing it work
+[11/2/2014 11:55:33 PM] Allison Mobley: yeah I'm sprinting on http://getcliq.github.io
+[11/2/2014 11:56:13 PM] Allison Mobley: any tips for the twitter api?
+[11/2/2014 11:56:47 PM] Allison Mobley: i know u researched it a bit, don't waste that work, put it in the bounty for this and I'll award it to you to give you some appcoins to incentivize your return
+[11/2/2014 11:57:18 PM] Blake Embrey: if i were to build it based on what i understand, i'd be polling the mentions api for mentions of your user (getcliq)
+[11/2/2014 11:57:29 PM] Blake Embrey: then i'd put that into a database for later when a user uses the site
+[11/2/2014 11:57:38 PM] Blake Embrey: for when you want to communicate off twitter
+[11/2/2014 11:57:56 PM] Blake Embrey: when you create a tweet from the site, you can automatically put that into the database
+[11/2/2014 11:58:05 PM] Blake Embrey: ignoring the polling step for that tweet
+[11/2/2014 11:58:18 PM] Blake Embrey: and dw about the bounty, apis is what i do
+[11/2/2014 11:58:31 PM] Allison Mobley: https://assembly.com/cliq/bounties/11 please click start work on this bounty, I will award it you and paste in what I've learned from this skype chat to inform myself moving forward, and thanks for your help!

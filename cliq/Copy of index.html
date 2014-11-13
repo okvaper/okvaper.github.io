@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Connect With Contractors</title>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!-- Le styles -->
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="assets/css/docs.css" rel="stylesheet">
+		<link href="assets/js/prettify.css" rel="stylesheet">
+		<style media="screen" type="text/css">
+			.btn-super {
+				width: 5%;
+				height: 36px;
+			}
+		</style>
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body data-spy="" data-target=".bs-docs-sidebar" ontouchmove="BlockMove(event);">
+	<div style="position:relative">
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+					<div>
+						<a class="brand navbar-fixed-top pull-left" href="#">ConnectWithContractors</a>
+					</div>
+					<div class="nav-collapse collapse">
+						<form class="navbar-form pull-right">
+							<input class="span2" type="text" placeholder="Email">
+							<input class="span2" type="password" placeholder="Password">
+							<button type="submit" class="btn">
+								Sign in
+							</button>
+						</form>
+						<ul class="nav pull-right"></ul>
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
+		</div>
+		<div id='CWCContent'>
+			<div class="container">
+				<!-- Docs nav
+				================================================== -->
+				<div class="row">
+					<div class="span3 bs-docs-sidebar">
+						<ul class="nav nav-list bs-docs-sidenav" id="CWCuiNav"></ul>
+					</div>
+					<div class="span9" id="CWCui"></div>
+				</div>
+			</div>
+		</div>
+		<div id='ExploreContent'></div>
+		<div id='AppContent' class="hide">
+			<div class="container">
+				<!-- Docs nav
+				================================================== -->
+				<div class="row">
+					<div class="bs-docs-sidebar">
+						<ul class="inline nav nav-list" id="inputs"></ul>
+					</div>
+					<div class="span9" id="proposal"></div>
+				</div>
+			</div>
+		</div>
+		<div id='NewsContent'></div>
+		<div id='ProfileContent'></div>
+		<!-- Footer
+		================================================== -->
+		<section id="about">
+			<footer class="footer">
+				<div class="container">
+					<p class="pull-right"><label class="oneLiner">Don't hire blind. Connect.</label>
+						<h4 class="brand">ConnectWithContractors</h4>
+					</p>
+					<p>
+						Designed and Developed by CEO Wayne Matthews and CTO Allison Mobley.
+					</p>
+					<ul class="footer-links">
+						<li>
+							<a href="http://hometract.blogspot.com">Blog</a>
+						</li>
+						<li class="muted">
+							&middot;
+						</li>
+						<li>
+							<a href="https://github.com/connectwithcontractors/connectwithcontractors.github.com/issues?state=open">Issues</a>
+						</li>
+					</ul>
+					<p>
+						&nbsp;
+					</p>
+				</div>
+			</footer>
+		</section>
+		
+
+						<div align="center" class="nav navbar navbar-fixed-bottom navbar-inverse navbar-inner" style="position:fixed;bottom:0px;height:78px;">
+							 
+							
+									<a id='home' class="btn btn-large btn-super btn-inverse"><i class="icon-home icon-white" style="position:relative;top:30%;"></i></a>
+							
+									<a id='leads' class="btn btn-large btn-super btn-inverse"><i class="icon-search" style="position:relative;top:30%;"></i></a>
+							
+									<a id='bids' class="btn btn-large btn-super btn-warning active"><i class="icon-wrench" style="position:relative;top:30%;"></i></a>
+							
+									<a id='' class="btn btn-large btn-super btn-inverse"><i class="icon-comment" style="position:relative;top:30%;"></i></a>
+							
+									<a id='profile' class="btn btn-large btn-super btn-inverse"><i class="icon-user" style="position:relative;top:30%;"></i></a>
+								
+						</div>
+	
+		</div>
+		<!--div data-spy="affix-bottom" data-offset-top="-600px" class="navbar">
+		<div class="navbar-inner">
+		<div class="container" style="height:65px">
+		<div>
+		<center>
+
+		</center>
+		</div>
+		</div>
+		</div>
+		</div-->
+		<!--div class="navbar navbar-fixed-bottom container-fluid">
+		<a id='CWC' class="btn btn-large btn-super active">CWC</a>
+		<a id='explore' class="btn btn-large btn-super">Explore</a>
+		<a id='app' class="btn btn-large btn-super">Work</a>
+		<a id='news' class="btn btn-large btn-super">My News</a>
+		<a id='profile' class="btn btn-large btn-super">Profile</a>
+		</div-->
+
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<!--script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script-->
+		<script src="assets/js/jquery.js"></script>
+		<script src="assets/js/prettify.js"></script>
+		<script src="assets/js/bootstrap-transition.js"></script>
+		<script src="assets/js/bootstrap-alert.js"></script>
+		<script src="assets/js/bootstrap-modal.js"></script>
+		<script src="assets/js/bootstrap-dropdown.js"></script>
+		<script src="assets/js/bootstrap-scrollspy.js"></script>
+		<script src="assets/js/bootstrap-tab.js"></script>
+		<script src="assets/js/bootstrap-tooltip.js"></script>
+		<script src="assets/js/bootstrap-popover.js"></script>
+		<script src="assets/js/bootstrap-button.js"></script>
+		<script src="assets/js/bootstrap-collapse.js"></script>
+		<script src="assets/js/bootstrap-carousel.js"></script>
+		<script src="assets/js/bootstrap-typeahead.js"></script>
+		<script src="assets/js/bootstrap-affix.js"></script>
+		<script src="assets/js/application.js"></script>
+		<script>
+		 function BlockMove(event) {
+  // Tell Safari not to move the window.
+  event.preventDefault() ;
+ }
+			//TOPLEVEL
+			var superButtons = new Array("CWC", "explore", "app", "news", "profile");
+			for (var i = 0; i < superButton.length; i++) {
+				alert(superButtons[i]);
+			}
+		</script>
+		<script>
+			//CWC
+			// Every programming language has some form of the following three crucial components of my style of hacking.
+			//     1) Arrays
+			//     2) Integers
+			//     3) Booleans
+			// If you master these three elements you can hack with any programming language, in any environment.
+
+			// These global arrays and variables store application state
+			var keys = new Array(), values = new Array(), toggleStateArray = new Array(), superButtons = new Array();
+			var keyCount = 0, valueCount = 0, debug = false;
+
+			// Variable set to anonymous function. Henceforth, refer to contents via the dot operator, i.e. json.someString
+			var json = (function() {
+				var json = null;
+				// The following asynchronous jQuery ajax function is forced to be synchronous with 'async' : false
+				$.ajax({
+					'async' : false,
+					'global' : false,
+					'url' : "wayne.json",
+					'dataType' : "json",
+					'success' : function(data) {
+						json = data;
+					}
+				});
+
+				return json;
+			})();
+
+			// Recursive json traversal function
+			function traverse(o, func) {//
+				for (i in o) {
+					func.apply(this, [i, o[i]]);
+					if ( typeof (o[i]) == "object") {
+						traverse(o[i], func);
+					}
+				}
+			}
+
+			function isNumber(n) {//checks if parameter passed in numeric
+				return !isNaN(parseFloat(n)) && isFinite(n);
+			}
+
+			function process(key, value) {
+				var debugInfo = "key: " + key + ", keyCount: " + keyCount + "\nvalue: " + value + ", valueCount: " + valueCount + "\n";
+				//if value is not a number, array, or object, thus making it a string
+				if (!(isNumber(value)) && (!(jQuery.isArray(value))) && (!(value == "[object Object]"))) {
+					//debugInfo += "value is a string\n";
+					values[valueCount] = value;
+					valueCount++;
+				} else {
+					if (isNumber(value)) {
+						//debugInfo += "value is a number\n";
+					} else if ( value instanceof Array) {
+						//debugInfo += "value is an array\n";
+					} else {
+						//debugInfo += "value: " + value + " is an object";
+					}
+
+				}
+				//if key is not a number, or the strings "type", "list", or "value"
+				if (!(isNumber(key)) && (key != "type" && key != "list" && key != "value")) {
+					keys[keyCount] = key;
+					keyCount++;
+				}
+				//alert(debugInfo);
+			}
+
+			function toggle(sectionID, toggleStateArrayIndex) {
+				for (var q = 0; q < toggleStateArray.length; q++) {
+					if (q != toggleStateArrayIndex) {
+						var selectron = '#' + keys[q];
+						$(selectron).addClass("hide");
+						$(selectron).removeClass('show');
+						toggleStateArray[q] = false;
+					}
+				}
+				if (toggleStateArray[toggleStateArrayIndex] == false) {
+					$(sectionID).addClass('show');
+					$(sectionID).removeClass('hide');
+					toggleStateArray[toggleStateArrayIndex] = true;
+				} else {
+					$(sectionID).addClass('hide');
+					$(sectionID).removeClass('show');
+					toggleStateArray[toggleStateArrayIndex] = false;
+				}
+			}
+
+			function buildCWC() {
+				traverse(json, process);
+				for (var i in keys) {
+					//alert(keys[i]);
+					$('#CWCui').append("<section  class=\"hide\" id=\"" + keys[i] + "\"><div class=\"page-header\"><h1>" + keys[i] + "</h1></div></section>");
+					$('#CWCuiNav').append("<li><a onclick='javascript:toggle(" + keys[i] + "," + i + ")' href=\"#" + keys[i] + "\">" + keys[i] + "<i class='icon-chevron-right'></i></a></li>");
+					var sectionCount = eval("json." + keys[i] + ".length");
+					var sectionSelector = "#" + keys[i];
+					toggleStateArray[i] = false;
+					if (i == 0) {
+						$(sectionSelector).addClass('show');
+						toggleStateArray[0] = true;
+					}
+					var subSections = new Array();
+					var subSectionCount = 0;
+					for (var j = 0; j < sectionCount; j++) {
+						var subSection = eval("json." + keys[i] + "[j].type");
+						subSections[subSectionCount] = subSection;
+						subSectionCount++;
+						$(sectionSelector).append("<div><a href='#" + subSection + "'><h3>" + subSection + "</h3></a><div id='" + subSection + "'></div</div>");
+					}
+					for (var k in subSections) {
+						var subSectionSelector = "#" + subSections[k];
+						var subSectionLengthEvalStr = "json." + keys[i] + "[" + k + "].list.length";
+						var subSectionLength = eval(subSectionLengthEvalStr);
+						for (var m = 0; m < subSectionLength; m++) {
+							var subSectionItemTypeEvalStr = "json." + keys[i] + "[" + k + "].list[" + m + "].type";
+							var subSectionItemType = eval(subSectionItemTypeEvalStr);
+							var subSectionItemValueEvalStr = "json." + keys[i] + "[" + k + "].list[" + m + "].value";
+							var subSectionItemValue = eval(subSectionItemValueEvalStr);
+							if (debug == true) {
+								alert("Type = " + subSectionItemType + " : Value = " + subSectionItemValue + " : (i,k,m) = (" + i + ',' + k + ',' + m + ")");
+							}
+							if (subSectionItemValue != undefined) {
+								$(subSectionSelector).append("<p>" + subSectionItemType + " &middot; " + subSectionItemValue + "</p>");
+								$(subSectionSelector).removeClass('hide');
+							} else {
+								var subSectionListLengthEvalStr = "json." + keys[i] + "[" + k + "].list[" + m + "].list.length";
+								var subSectionListLength = eval(subSectionListLengthEvalStr);
+								var prettyInt = m + 1;
+								var subSectionListItemSelector = subSectionSelector + subSectionItemType + m;
+								$(subSectionSelector).append("<div id='" + subSectionSelector.substr(1, subSectionSelector.length) + subSectionItemType + m + "'><h5>" + subSectionSelector.substr(1, subSectionSelector.length) + "_" + subSectionItemType + "_" + prettyInt + "</h5></div>");
+								var p = 0;
+								while (p < subSectionListLength) {
+									var subSectionListItemTypeEvalStr = "json." + keys[i] + "[" + k + "].list[" + m + "].list[" + p + "].type";
+									var subSectionListItemType = eval(subSectionListItemTypeEvalStr);
+									var subSectionListItemValueEvalStr = "json." + keys[i] + "[" + k + "].list[" + m + "].list[" + p + "].value";
+									var subSectionListItemValue = eval(subSectionListItemValueEvalStr);
+									$(subSectionListItemSelector).append("<p>" + subSectionListItemType + " &middot; " + subSectionListItemValue + "</p>");
+									p++;
+								}
+							}
+						}
+					}
+				}
+				for (var i in values) {
+					//$('#ui').append("<li><a href=\"#"+values[i]+"\">" + values[i] + "</a></li>");
+				}
+			}
+
+			buildCWC();
+		</script>
+		<script>
+			//APP
+			/*
+			 * Hard Inputs: Contractor Name, Contractor Company, Client Name
+			 * Auto Inputs: Today's Date
+			 * Variable Inputs: Product, Price, Quantity, Total
+			 * Buttons: Add Variable Input Line
+			 * Outputs: Proposal, Total Materials Cost
+			 */
+			execute();
+			function execute() {
+				var proposalSent = false, addButtonClicked = false, productCount = 0;
+				;
+				var controlValues = new Array(productCount, addButtonClicked);
+				//alert("productCount: "+controlValues[0]+' addButtonClicked: '+controlValues[1]);
+
+				AddCompanyLine();
+				AddButtons();
+				AddTotalCostLine();
+				$("#AddNewInputItemButton").attr('href', 'javascript:AddButtonClicked=true;');
+				productCount++;
+				//alert("productCount: "+controlValues[0]+' addButtonClicked: '+controlValues[1]);
+
+				if (proposalSent != true) {
+					if (addButtonClicked) {
+						controlValues = AddVariableInputLine(productCount, addButtonClicked);
+						alert(controlValues);
+					}
+				}
+				//addEventListenersForInputChanges();
+				//$('#TotalMaterialsCost').val("$0.00");
+				//var totalValue = 0;
+
+				//return { name:this.name, value:this.value };
+			}
+
+			function AddVariableInputLine(productCount, addButtonClicked) {
+				var pni = "ProductNameInput" + productCount;
+				var ppi = "ProductPriceInput" + productCount;
+				var pqi = "ProductQuantityInput" + productCount;
+				var ptc = "ProductTotalCostOutput" + productCount;
+				$("<ul>", {
+					class : "inline",
+					html : $("<div>", {
+						class : "",
+						html : $("<div>", {
+							class : "nav"
+						}).append($("<td>", {
+							class : "",
+							html : "Product Name: "
+						}), $("<td>", {
+							class : "",
+							html : $("<input>", {
+								id : pni
+							})
+						}), $("<td>", {
+							class : "",
+							html : "Unit Price: "
+						}), $("<td>", {
+							class : "",
+							html : $("<input>", {
+								id : ppi
+							})
+						}), $("<td>", {
+							class : "",
+							html : "Quantity: "
+						}), $("<td>", {
+							class : "",
+							html : $("<input>", {
+								id : pqi
+							})
+						}), $("<td>", {
+							class : "",
+							html : "Cost: "
+						}), $("<td>", {
+							class : "",
+							html : $("<input>", {
+								id : ptc
+							})
+						}))
+					})
+				}).appendTo("#inputs")
+				addEventListenerForChangesOnGivenInput(ppi, productCount);
+				addEventListenerForChangesOnGivenInput(pqi, productCount);
+				addEventListenerForChangesOnGivenInput(ptc, productCount);
+				productCount++;
+				addButtonClicked = false;
+				return {
+					productCount : this.productCount,
+					addButtonClicked : this.addButtonClicked
+				};
+			}
+
+			function addEventListenerForChangesOnGivenInput(inputID, index) {
+				hashedID = "#" + inputID;
+				$(hashedID).bind("change paste keyup blur", function() {
+					var thisLinesTotalCostID = "#ProductTotalCostOutput" + index;
+					var result = '$0.00';
+					var thisLinesPriceID = "#ProductPriceInput" + index;
+					var thisLinesQuantityID = "#ProductQuantityInput" + index;
+					var price = $(thisLinesPriceID).val();
+					var quantity = $(thisLinesQuantityID).val();
+					if (isNumber(price) && isNumber(quantity)) {
+						result = price * quantity;
+						//calculateTotalMaterialsCost();
+					}
+					//if(isNumber($(thisLinesPriceID).val())){
+					//alert();
+					//}
+					$(thisLinesTotalCostID).val(result);
+					//calculateTotalMaterialsCost();
+				});
+			}
+
+			function isNumber(n) {
+				return !isNaN(parseFloat(n)) && isFinite(n);
+			}
+
+			function calculateTotalMaterialsCost() {
+
+				var count = -1;
+				if (productCount == 0) {
+					count = 1
+				} else {
+					count = productCount;
+				}
+				for (var i = 0; i < count; i++) {
+					var subtotalItemID = "#ProductTotalCostOutput" + i;
+					var subtotalValue = $(subtotalItemID).val();
+					alert(totalValue + " " + subtotalValue);
+					totalValue = totalValue + subtotalValue;
+				}
+				if (isNumber(totalValue))
+					;
+				$('#TotalMaterialsCost').val(totalValue);
+			}
+
+			function AddButtons() {
+				$("<input>", {
+					id : "sampleInputID"
+				}).prependTo('body');
+				var width = $("#sampleInputID").width();
+				//width = width/3;
+				width = width / 2;
+				$("#sampleInputID").remove();
+				var widthStr = "width:" + width + "px";
+				$("<ul>", {
+					class : "inline",
+					html : $("<div>", {
+						class : "",
+						html : $("<div>", {
+							class : "nav"
+						}).append($("<div>", {
+							class : "span3",
+							html : $("<div>", {
+								class : "btn-toolbar",
+								id : "AddNewInputItemButton",
+								html : "Send Proposal",
+								style : widthStr
+							})
+						}).append($("<td>", {
+							class : "",
+							html : $("<a>", {
+								class : "btn btn-success btn-large",
+								id : "AddNewInputItemButton",
+								html : "Send Proposal",
+								style : widthStr
+							})
+						}), $("<td>", {
+							class : "",
+							html : $("<a>", {
+								class : "btn btn-primary btn-large",
+								id : "AddNewInputItemButton",
+								html : "Materials Line++",
+								style : widthStr
+							})
+						})))
+					})
+				}).prependTo("#inputs");
+				//$("#sampleInputID").class('hide');
+			}
+
+			function AddCompanyLine() {
+				$("<ul>", {
+					class : "inline",
+					html : $("<div>", {
+						class : "",
+						html : $("<div>", {
+							class : "nav"
+						}).append($("<td>", {
+							class : "span",
+							html : "Company Name: "
+						}), $("<td>", {
+							class : "span",
+							html : $("<input>", {
+								id : "ContractorNameInput"
+							})
+						}), $("<td>", {
+							class : "span",
+							html : "Contractor Name: "
+						}), $("<td>", {
+							class : "span",
+							html : $("<input>", {
+								id : "ContractorCompanyInput"
+							})
+						}), $("<td>", {
+							class : "span",
+							html : "Customer Name: "
+						}), $("<td>", {
+							class : "span",
+							html : $("<input>", {
+								id : "CustomerNameInput"
+							})
+						}), $("<td>", {
+							class : "span",
+							html : "Customer E-mail: "
+						}), $("<td>", {
+							class : "span",
+							html : $("<input>", {
+								id : "CustomerEmailInput"
+							})
+						}))
+					})
+				}).appendTo("#inputs");
+			}
+
+			function AddTotalCostLine() {
+				$("<ul>", {
+					class : "inline",
+					html : $("<div>", {
+						class : "",
+						html : $("<div>", {
+							class : "nav"
+						}).append($("<td>", {
+							class : "",
+							html : "Total Materials Cost: "
+						}), $("<td>", {
+							class : "",
+							html : $("<input>", {
+								id : "TotalMaterialsCost"
+							})
+						}))
+					})
+				}).prependTo("#proposal");
+			}
+
+		</script>
+		
+	</body>
+</html>
